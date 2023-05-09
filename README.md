@@ -9,7 +9,7 @@
 1. 打开 `_data/domain_list.yml` 文件。
 2. 在文件末尾添加一个新的域名条目，按照以下格式：
 
-   ```yaml
+   ```yml
    - name: 域名名称
      domain: 域名地址
      contain_domain:
@@ -36,8 +36,7 @@ Open the _data/domain_list.yml file.
 
 Add a new domain entry at the end of the file using the following format:
 
-yaml
-Copy code
+```yml
 - name: Domain Name
   domain: Domain Address
   contain_domain:
@@ -45,6 +44,7 @@ Copy code
     - Subdomain 2
     - Subdomain 3
   update_time: YYYY-MM-DD
+```
 Replace the placeholders with the actual values for the name, domain address, subdomains, and update date.
 
 Submit your changes and create a pull request.
