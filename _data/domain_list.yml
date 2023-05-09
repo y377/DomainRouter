@@ -1,0 +1,25 @@
+- name: 油管
+  domain: www.youtube.com
+  contain_domain: 
+    - ggpht.com
+    - youtube.com
+    - gstatic.com
+    - google.com.hk
+    - doubleclick.net
+    - googleusercontent.com
+    - googleapis.com
+    - ytimg.com
+    - googlevideo.com
+  update_time: 2023-05-08
+
+- name: reddit
+  domain: www.reddit.com
+  contain_domain: 
+    - redditmedia.com
+    - datadome.co
+    - reddit.com
+    - accounts.google.com
+    - redd.it
+    - redditspace.com
+    - redditstatic.com
+  update_time: 2023-05-08
