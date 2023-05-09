@@ -2,6 +2,7 @@
 layout: default
 title: 域名分流
 ---
+<div class="row"><h6>Last Build Time: {{ site.last_build_time | date: "%Y-%m-%d %H:%M:%S %z" }}</h6><div>
 <div class="row pt-3 bg-light bg-gradient">
     <div class="col">
         <button type="button" class="btn btn-outline-primary" id="selectAllButton"><i class="bi bi-list-check">Select All</i></button>
