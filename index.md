@@ -20,7 +20,7 @@ description: 特别适和爱快软路由的域名分流
         </ul>
     </div>
     <div id="copyArea" class="col-lg-6 col-md-6 col-sm-12">
-        <button class="btn btn-danger" id="oneclickcopy">点击一键复制</button>
+        <h5><button class="btn btn-danger" id="oneclickcopy">点击一键复制</button></h5>
         <textarea id="copyContent" style="height: auto; min-height: 300px;" rows="2" class="col-12" readonly></textarea>
     </div>
 </div>
