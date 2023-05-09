@@ -9,7 +9,7 @@ description: 特别适和爱快软路由的域名分流
 </div>
 <div class="row pt-3 bg-light bg-gradient">
     <div class="col-lg-6 col-md-6 col-sm-12">
-        <button type="button" class="btn btn-outline-primary" id="selectAllButton"><i class="bi bi-list-check">Select All</i></button>
+        <button type="button" class="btn btn-outline-primary btn btn-danger mb-1" id="selectAllButton"><i class="bi bi-list-check">Select All</i></button>
         <ul class="list-group">
             {% for item in site.data.domain_list %}
             <li class="list-group-item">
@@ -20,7 +20,7 @@ description: 特别适和爱快软路由的域名分流
         </ul>
     </div>
     <div id="copyArea" class="col-lg-6 col-md-6 col-sm-12">
-        <h5><button class="btn btn-danger" id="oneclickcopy">点击一键复制</button></h5>
+        <h5><button class="btn btn-danger btn btn-danger mb-1" id="oneclickcopy">点击一键复制</button></h5>
         <textarea id="copyContent" style="height: auto; min-height: 300px;" rows="2" class="col-12" readonly></textarea>
     </div>
 </div>
