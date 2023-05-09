@@ -2,10 +2,6 @@ url: "https://abdd.net" # the base hostname & protocol for your site, e.g. http:
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
 
-last_build_time: "{{ site.time | date_to_xmlschema }}"
-
-
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
