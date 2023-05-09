@@ -16,7 +16,7 @@ title: 域名分流
         </ul>
     </div>
     <div id="copyArea" class="col">
-        <h5>待复制区域 <button class="btn btn-danger" id="oneclickcopy">点击一键复制</button></h5>
+        <button class="btn btn-danger" id="oneclickcopy">点击一键复制</button>
         <textarea id="copyContent" style="height: auto; min-height: 300px;" rows="2" cols="50" readonly></textarea>
     </div>
 </div>
