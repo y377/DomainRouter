@@ -65,10 +65,10 @@
     - intercom.io
   update_time: 2023-05-10
 
-- name: 通用
+- name: 通用（基于Google-play抓取）
   icon: <i class="bi bi-google-play text-warning"></i>
   update_time: 2023-05-11
-  domain: （基于Google-play抓取）
+  domain: play.google.com
   contain_domain:
     - policies.google.com
     - care.king.com
