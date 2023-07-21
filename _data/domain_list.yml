@@ -11,7 +11,8 @@
     - googleapis.com
     - ytimg.com
     - googlevideo.com
-  update_time: 2023-05-08
+    - google.com
+  update_time: 2023-07-22
 
 - name: google搜索
   domain: www.google.com
@@ -63,7 +64,10 @@
     - intercomcdn.com
     - sentry.io
     - intercom.io
-  update_time: 2023-05-10
+    - cdn.openai.com
+    - o33249.ingest.sentry.io
+    - api-iam.intercom.io
+  update_time: 2023-07-22
 
 - name: 通用（基于Google-play抓取）
   icon: <i class="bi bi-google-play text-warning"></i>
