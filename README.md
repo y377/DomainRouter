@@ -2,6 +2,11 @@
 
 这是一个基于 Jekyll 构建的域名分流项目。它允许用户在网页端直接操作，并且专业用户可以提交更多未包含的域名。
 
+## 未来路线图
+
+[] 使用本地Linux机器定时检测，当前[页面](https://www.abdd.net/)使用的是韩国甲骨文云服务器检测的，然后还需要我手动编辑；正确的是本地机器检测无法访问的网站，然后同步到GitHub。
+[] 添加GitHub Action，将本地的机器检测到的玉面自动填入`_data/domain_list.yml`文件，然后自动编译。
+
 ## 提交新的域名
 
 如果您是专业用户，并且希望提交新的域名以进行分流，请按照以下步骤操作：
@@ -55,4 +60,5 @@ Feedback and Issues
 If you encounter any issues or have any feedback, please feel free to submit them on the Issues page of this project.
 
 Thank you for your contribution!
+
 
