@@ -4,8 +4,8 @@
 
 ## 未来路线图
 
-[] 使用本地Linux机器定时检测，当前[页面](https://www.abdd.net/)使用的是韩国甲骨文云服务器检测的，然后还需要我手动编辑；正确的是本地机器检测无法访问的网站，然后同步到GitHub。
-[] 添加GitHub Action，将本地的机器检测到的玉面自动填入`_data/domain_list.yml`文件，然后自动编译。
+- [ ] 使用本地Linux机器定时检测，当前[页面](https://www.abdd.net/)使用的是韩国甲骨文云服务器检测的，然后还需要我手动编辑；正确的是本地机器检测无法访问的网站，然后同步到GitHub。
+- [ ] 添加GitHub Action，将本地的机器检测到的玉面自动填入`_data/domain_list.yml`文件，然后自动编译。
 
 ## 提交新的域名
 
@@ -32,7 +32,12 @@
 感谢您的贡献！
 
 # DomainRouter
+
 This is a domain routing project built with Jekyll. It allows users to operate directly on the web interface, and professional users can submit additional domains that are not included.
+
+## Future Roadmap
+- [ ] Use the local Linux machine to regularly detect, the current [page](https://www.abdd.net/) is detected by the Korean Oracle cloud server, and then I need to edit it manually; the correct one is that the local machine detects the inaccessible website, and then synchronizes to GitHub.
+- [ ] Add GitHub Action, automatically fill in the jade face detected by the local machine into the _data/domain_list.yml file, and then compile it automatically.
 
 Submitting a New Domain
 If you are a professional user and would like to submit a new domain for routing, please follow these steps:
