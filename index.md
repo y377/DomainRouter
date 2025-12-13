@@ -16,26 +16,49 @@ description: 特别适和爱快软路由的域名分流
     <div class="col-lg-6 col-md-6 col-sm-12">
         <h5><button type="button" class="btn btn-outline-primary mb-1" id="selectAllButton"><i class="bi bi-list-check">Select All</i></button></h5>
         <ul class="list-group">
-            {% for item in site.data.domain_list %}
-            <li class="list-group-item">
-                <input class="form-check-input align-middle me-1 fs-5" type="checkbox" value="{{ item.contain_domain | join: '<br>'}}" id="{{ item.name }}Checkbox">
-                <label class="form-check-label align-middle" for="{{ item.name }}Checkbox">
-                    {% for item in site.data.domain_list %}
-                    {% assign icon = item.icon | to_s %}
-                    {% if icon contains '/' or icon contains '.' %}
-                    <img class="app-icon" src="{{ icon | relative_url }}" alt="{{ item.name }}" loading="lazy">
-                    {% elsif icon != '' %}
-                    <i class="{{ icon | replace_first: 'bi', 'bi app-bi' }}"></i>
-                    {% else %}
-                    <span class="app-icon app-icon--empty"></span>
-                    {% endif %}
-                    <span class="app-name">{{ item.name }}</span>
-                    <a class="app-domain" href="https://{{ item.domain }}">{{ item.domain }}</a>
-                    <small class="app-updated">{{ item.update_time }}</small>
-                    {% endfor %}
-                </label>
-            </li>
-            {% endfor %}
+{% for item in site.data.domain_list %}
+<li class="list-group-item">
+  <input
+    class="form-check-input align-middle me-1 fs-5"
+    type="checkbox"
+    value="{{ item.contain_domain | default: empty | join: '\n' }}"
+    id="{{ item.name }}Checkbox"
+  >
+
+  <label class="form-check-label align-middle" for="{{ item.name }}Checkbox">
+
+    {% assign icon = item.icon | to_s | strip %}
+
+    {% if icon != '' %}
+      {% if icon contains '<svg' %}
+        {{ icon }}
+      {% elsif icon contains '/' or icon contains '.' %}
+        <img
+          src="{{ icon | relative_url }}"
+          alt="{{ item.name }}"
+          style="width:1.4em;height:1.4em;object-fit:contain;vertical-align:-0.2em;margin-right:.35rem;"
+          loading="lazy"
+        >
+      {% else %}
+        <i class="{{ icon | replace_first: 'bi', 'bi fs-3' }}"></i>
+      {% endif %}
+    {% endif %}
+
+    {{ item.name }}
+    <i class="bi bi-dash"></i>
+
+    <a href="https://{{ item.domain }}"
+       class="link-offset-2 link-offset-3-hover link-underline-danger link-underline-opacity-0 link-underline-opacity-75-hover">
+      {{ item.domain }}
+    </a>
+
+    {% if item.update_time %}
+      <i class="bi bi-dash opacity-50">{{ item.update_time }}</i>
+    {% endif %}
+
+  </label>
+</li>
+{% endfor %}
         </ul>
     </div>
     <div id="copyArea" class="col-lg-6 col-md-6 col-sm-12">
