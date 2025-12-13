@@ -200,7 +200,8 @@
   update_time: 2025-12-12
 
 - name: Gmail 
-  icon: assets/images/logo-gmail.png
+  icon: 
+  icon_img: assets/images/logo-gmail.png
   domain: mail.google.com
   contain_domain: 
     - aspmx.l.google.com
