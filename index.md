@@ -1,12 +1,3 @@
-给我看下这个DomainRouter/_data/domain_list.yml里面的
-```
-- name: Gmail 
-  icon: assets/images/logo-gmail.png
-  domain: mail.google.com
-  contain_domain: 
-```
-icon: assets/images/logo-gmail.png没被识别成图片路径，识别成了文字；下面的是原代码：
-```
 ---
 layout: default
 title: 域名分流
@@ -136,5 +127,3 @@ copyButton.addEventListener('click', () => {
     console.log('文本已成功复制到剪贴板');
 });
 </script>
-```
-不行帮我优化一下
