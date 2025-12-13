@@ -46,19 +46,15 @@ description: 特别适和爱快软路由的域名分流
           {% assign icon = item.icon | to_s | strip %}
 
           {% if icon != '' %}
-            {%- comment -%}
-            1) icon 是 HTML（<svg> / <i> / <span>...）→ 直接输出
-            2) icon 像 assets/... 或 xx.svg/png/jpg → 当图片路径
-            3) 否则当 Bootstrap Icons 的 class（bi bi-xxx）
-            {%- endcomment -%}
+{% assign first = icon | slice: 0, 1 %}
 
-            {% if icon startswith '<' %}
-              <span class="icon-wrap">{{ icon }}</span>
-            {% elsif icon contains '/' or icon contains '.' %}
-              <img class="app-icon" src="{{ icon | relative_url }}" alt="{{ item.name | escape }}" loading="lazy">
-            {% else %}
-              <i class="{{ icon | replace_first: 'bi', 'bi fs-4' }} app-bi"></i>
-            {% endif %}
+{% if first == '<' %}
+  <span class="icon-wrap">{{ icon }}</span>
+{% elsif icon contains '/' or icon contains '.' %}
+  <img class="app-icon" src="{{ icon | relative_url }}" alt="{{ item.name | escape }}" loading="lazy">
+{% else %}
+  <i class="{{ icon | replace_first: 'bi', 'bi fs-4' }} app-bi"></i>
+{% endif %}
           {% else %}
             <span class="app-icon app-icon--empty"></span>
           {% endif %}
