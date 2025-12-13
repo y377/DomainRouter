@@ -1,3 +1,12 @@
+给我看下这个DomainRouter/_data/domain_list.yml里面的
+```
+- name: Gmail 
+  icon: assets/images/logo-gmail.png
+  domain: mail.google.com
+  contain_domain: 
+```
+icon: assets/images/logo-gmail.png没被识别成图片路径，识别成了文字；下面的是原代码：
+```
 ---
 layout: default
 title: 域名分流
@@ -15,10 +24,16 @@ description: 特别适和爱快软路由的域名分流
             <li class="list-group-item">
                 <input class="form-check-input align-middle me-1 fs-5" type="checkbox" value="{{ item.contain_domain | join: '<br>'}}" id="{{ item.name }}Checkbox">
                 <label class="form-check-label align-middle" for="{{ item.name }}Checkbox">
-                {% if item.icon %}
-                <img src="{{ item.icon | relative_url }}" alt="{{ item.name }}" style="width:1.4em;height:1.4em;vertical-align:-0.2em;margin-right:.35rem;">
-                {% endif %}
-                {{ item.name }}<i class="bi bi-dash"></i><a href="https://{{ item.domain }}" class="link-offset-2 link-offset-3-hover link-underline-danger link-underline-opacity-0 link-underline-opacity-75-hover">{{ item.domain }}</a><i class="bi bi-dash opacity-50">{{ item.update_time }}</i>
+                    {% if item.icon_img %}
+                    <img src="{{ item.icon | relative_url }}" alt="{{ item.name }}" style="width:1.4em;height:1.4em;vertical-align:-0.2em;margin-right:.35rem;">
+                    {% elsif item.icon_bi %}
+                    <i class="{{ item.icon_bi | replace_first: 'bi', 'bi fs-3' }}"></i>
+                    {% endif %}
+                    {{ item.name }}
+                    <i class="bi bi-dash"></i>
+                    <a href="https://{{ item.domain }}" class="link-offset-2 link-offset-3-hover link-underline-danger link-underline-opacity-0 link-underline-opacity-75-hover">{{ item.domain }}
+                    </a>
+                    <i class="bi bi-dash opacity-50">{{ item.update_time }}</i>
                 </label>
             </li>
             {% endfor %}
@@ -121,3 +136,5 @@ copyButton.addEventListener('click', () => {
     console.log('文本已成功复制到剪贴板');
 });
 </script>
+```
+不行帮我优化一下
